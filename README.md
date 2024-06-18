@@ -7,7 +7,8 @@ A base template setup for a django app to be deployed using docker on aws ec2 in
 ### Prerequisites
 Before you begin, make sure you have the following installed on your local machine:
 - Docker
-- Docker Compose
+- Docker Compose 
+- decouple ( https://pypi.org/project/python-decouple/ ) for reading env files
 
 ### Installation
 1. Clone this repository to your local machine.
