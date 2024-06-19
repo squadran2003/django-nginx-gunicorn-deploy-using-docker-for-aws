@@ -9,12 +9,16 @@ Before you begin, make sure you have the following installed on your local machi
 - Docker
 - Docker Compose 
 - decouple ( https://pypi.org/project/python-decouple/ ) for reading env files
+- aws secrets manager (you will need to figure out how to download you secrets and export in the enviroment)
 
 ### Installation
 1. Clone this repository to your local machine.
-2. Navigate to the project directory: `cd django-nginx-gunicorn-deploy-using-docker-for-aws`.
-3. Build the Docker image: `docker-compose build`.
-4. Start the Docker containers: `docker-compose up -d`.
+2. Navigate to the project directory: `cd django-nginx-gunicorn-deploy-using-docker-for-aws`
+3. Copy contents to your root app folder
+4. change config folder name to your folder
+5. amend docker  files to path your app folders
+6. Build the Docker image: `docker-compose build`.
+7. Start the Docker containers: `docker-compose up -d`.
 
 ## Configuration
 
