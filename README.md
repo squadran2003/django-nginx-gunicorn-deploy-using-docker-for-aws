@@ -19,7 +19,7 @@ https://python-poetry.org/
 1. Clone this repository to your local machine.
 2. Navigate to the project directory: `cd django-nginx-gunicorn-deploy-using-docker-for-aws`
 3. Copy contents to your root app folder
-4. change config folder name to your folder. Should look something like this if your app is called chatty
+4. change config folder name to your folder. Assuming you have a app called chatty the directory wil look something like this.
 ![screenshot](outer_directory.png)
 
 
