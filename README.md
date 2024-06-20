@@ -7,8 +7,12 @@ A base template setup for a django app to be deployed using docker on aws ec2 in
 ### Prerequisites
 Before you begin, make sure you have the following installed on your local machine:
 - Docker
-- Docker Compose 
+- Docker Compose
+## Knowledge of poetry is required as its used to add new packages
+https://python-poetry.org/
+## other packages
 - decouple ( https://pypi.org/project/python-decouple/ ) for reading env files
+## for CI/CD using aws it will be handy if you know how to use aws secrets manager
 - aws secrets manager (you will need to figure out how to download you secrets and export in the enviroment)
 
 ### Installation
