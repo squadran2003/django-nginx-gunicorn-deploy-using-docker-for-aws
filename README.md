@@ -15,8 +15,7 @@ Before you begin, make sure you have the following installed on your local machi
 1. Clone this repository to your local machine.
 2. Navigate to the project directory: `cd django-nginx-gunicorn-deploy-using-docker-for-aws`
 3. Copy contents to your root app folder
-4. change config folder name to your folder
-Assume you have a app called chatty this is what your directory should look that
+4. change config folder name to your folder. Should look something like this if your app is called chatty
 ![screenshot](outer_directory.png)
 
 
