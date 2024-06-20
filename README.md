@@ -26,7 +26,7 @@ https://python-poetry.org/
 
 
 
-5. amend docker  files to path your app folders
+5. amend docker  file paths to match your directory structure
 6. Build the Docker image: `docker-compose build`.
 7. Start the Docker containers: `docker-compose up -d`.
 
