@@ -11,21 +11,26 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+from decouple import config, Csv
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
-
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-f)+7tb^vt&#02p^+g$7@*lewmbs7wa2=-8^l4)05qz#xk3_wi2'
+SECRET_KEY = config('SECRET_KEY', 'django-insecure-#&z!_!@')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='127.0.0.1', cast=Csv())
+SECRET_KEY = config('SECRET_KEY', os.environ.get('SECRET_KEY'))
+DB_NAME = config('DB_NAME', default=os.environ.get('DB_NAME'))
+DB_USER = config('DB_USER', default=os.environ.get('DB_USER'))
+DB_PASSWORD = config('DB_PASSWORD', default=os.environ.get('DB_PASSWORD'))
+DB_HOST = config('DB_HOST', default=os.environ.get('DB_HOST'))
+DJANGO_SETTINGS_MODULE = config('DJANGO_SETTINGS_MODULE', default=os.environ.get('DJANGO_SETTINGS_MODULE'))
 
 
 # Application definition
@@ -75,8 +80,12 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': DB_NAME,
+        'USER': DB_USER,
+        'PASSWORD': DB_PASSWORD,
+        'HOST': DB_HOST,
+        'PORT': 5432
     }
 }
 
